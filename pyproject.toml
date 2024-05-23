@@ -8,9 +8,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.9"
 pyserial = "^3.5"
+ipykernel = { version = "*", optional = true }
+zaber-motion = { version = "^6.0.0", optional = true }
 
 [tool.poetry.extras]
 zaber = ["zaber-motion"]
+test = ["ipykernel"]
 
 [build-system]
 requires = ["poetry-core"]

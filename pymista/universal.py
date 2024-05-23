@@ -87,10 +87,13 @@ class UniversalStage(object):
 
     def wait_until_idle(self):
         """Sleep until all movement is stopped"""
-        busy = True
-        while busy:
-            busy = any([ax.is_busy() for ax in self.axes])
+        while self.is_moving():
+            pass
             # exit loop only when all axis are no longer moving
+
+    def is_moving(self) -> bool:
+        """Check if stage is currently moving"""
+        return any([ax.is_busy() for ax in self.axes])
 
     def get_bounds(self):
         maxima = self.settings_get('limit.max')
