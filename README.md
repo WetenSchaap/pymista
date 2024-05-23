@@ -32,16 +32,20 @@ Implementing more stages is (or should be) not so difficult. I will only add thi
 Note that this module is designed such that you do *not* need all packages to control all stages, even if you don't have this particular brand. Instead, you specify which stages you have, and thus which packages you need/want. We use 'extras' for that. Possible extras are:
 
 - `zaber` - For zaber stages.
+- `test`  - For testing.
 
 Since this module is not added to Pypi (yet), you will have to install it manually from this repo. In the examples, below we include the `zaber` extra. 
 
 Using *pip*, run:
-  
-  python -m pip install -e "pymista[zaber] @ git+https://github.com/XXX/pymista.git"
+``` bash
+python -m pip install -e "pymista[zaber] @ git+https://github.com/WetenSchaap/pymista.git"
+```
 
 Using, *poetry*, you can add the following to your `pyproject.toml`:
-  
-  pymista = { git = "https://github.com/XXX/pymista.git" extras = ["zaber"]}
+
+``` toml
+pymista = { git = "https://github.com/WetenSchaap/pymista.git" extras = ["zaber"]}
+```
 
 ## Accessing and edditing stage settings
 
