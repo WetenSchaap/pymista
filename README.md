@@ -44,7 +44,7 @@ python -m pip install -e "pymista[zaber] @ git+https://github.com/WetenSchaap/py
 Using, *poetry*, you can add the following to your `pyproject.toml`:
 
 ``` toml
-pymista = { git = "https://github.com/WetenSchaap/pymista.git" extras = ["zaber"]}
+pymista = { git = "https://github.com/WetenSchaap/pymista.git", extras = ["zaber"]}
 ```
 
 ## Accessing and edditing stage settings
