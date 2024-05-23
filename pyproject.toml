@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pymista"
+version = "0.1.0"
+description = "Control (microscopy) stages using a unified Python interface."
+authors = ["WetenSchaap <36634689+WetenSchaap@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyserial = "^3.5"
+
+[tool.poetry.extras]
+zaber = ["zaber-motion"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
